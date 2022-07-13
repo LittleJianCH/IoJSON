@@ -8,10 +8,7 @@ JSON := Map clone do(
   )
 
   squareBrackets := method(
-    _l := List clone
-    call message arguments foreach(arg,
-      _l append(doMessage(arg))
-    )
+    call message arguments map(x, doMessage(x))
   )
 
   assign := method(key, value,
