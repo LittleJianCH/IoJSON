@@ -2,8 +2,9 @@ OperatorTable addAssignOperator(":", "assign")
 
 JSON := Map clone do(
   curlyBrackets := method(
+    _m := JSON clone 
     call message arguments foreach(arg,
-      doMessage(arg)
+      _m doMessage(arg)
     )
   )
 
