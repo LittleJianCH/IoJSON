@@ -23,3 +23,9 @@ json2 foreach(key, value,
 "----------------" println
 
 json1 at("Sally Johnson") at("age") println
+
+"----------------" println
+
+json1 atPut("string", "Hi IoJSON")
+
+json1 stringfy println

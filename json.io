@@ -28,4 +28,20 @@ JSON := Map clone do(
   readFromFile := method(filename,
     readFromString(File with(filename) openForReading contents)
   )
+
+  stringfy := method(
+    "{ " .. self map(key, value, key .. ": " .. (value stringfy)) join(", ") asString .. " }"
+  )
+)
+
+List stringfy := method(
+  "[" .. map(x, x stringfy) join(", ") .. "]"
+)
+
+Sequence stringfy := method(
+  "\"" .. self asString .. "\""
+)
+
+Object stringfy := method(
+  call target asString
 )

@@ -40,6 +40,14 @@ json2 foreach(key, value,
   key println
   value println
 )
+
+json2 atPut("height", 180)
+```
+
+You can also use `stringfy` to convert a `JSON` to a `String`.
+
+``` io
+json2 stringfy println
 ```
 
 ## Something more
