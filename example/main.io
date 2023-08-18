@@ -1,8 +1,8 @@
-doFile("../json.io")
+jsonLib := doFile("../json.io")
 
-json1 := JSON clone readFromFile("./example.json")
+json1 := jsonLib JSON clone readFromFile("./example.json")
 
-json2 := JSON clone readFromString("{\"name\":\"littlejian\",\"age\":18, \"hobbies\":[\"code\",\"play\",\"drink\"]}")
+json2 := jsonLib JSON clone readFromString("{\"name\":\"littlejian\",\"age\":18, \"hobbies\":[\"code\",\"play\",\"drink\"]}")
 
 json2 at("name") println
 
